@@ -1,9 +1,14 @@
 public class Threads1 extends Thread{
     public void run(){
-        System.out.println("Hello I am thread");
+        int i=1;
+        while(i<10){
+            System.out.println("Hello I am thread"+i);
+            i++;
+        }
+        
     }
     public static void main(String []args){
-        Thread th = new Thread();
+        Threads1 th = new Threads1();
         th.start();
     }
 }
