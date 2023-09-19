@@ -9,14 +9,17 @@ class MyThread extends Thread{
 }
 
 public class ThreadTest{
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
         MyThread t = new MyThread();
         t.setDaemon(true);
         t.start();
-        try{
+
+        /*Thread mainThread = Thread.currentThread();
+        mainThread.join();*/
+
+        /*try{
             Thread.sleep(10);
         }catch(Exception e){
-            
-        }
+        }*/
     }
 }
